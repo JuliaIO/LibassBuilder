@@ -26,7 +26,7 @@ platforms = [
     Linux(:aarch64, :glibc),
     Linux(:armv7l, :glibc, :eabihf),
     Linux(:powerpc64le, :glibc),
-    Linux(:i686, :musl),
+    #Linux(:i686, :musl),
     Linux(:x86_64, :musl),
     Linux(:aarch64, :musl),
     Linux(:armv7l, :musl, :eabihf),
