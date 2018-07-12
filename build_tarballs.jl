@@ -26,7 +26,7 @@ platforms = [
     Linux(:aarch64, :glibc),
     Linux(:armv7l, :glibc, :eabihf),
     Linux(:powerpc64le, :glibc),
-    #Linux(:i686, :musl),
+    Linux(:i686, :musl),
     Linux(:x86_64, :musl),
     Linux(:aarch64, :musl),
     Linux(:armv7l, :musl, :eabihf),
@@ -43,7 +43,7 @@ products(prefix) = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    "https://github.com/Gnimuc/FreeTypeBuilder/releases/download/v2.9/build.jl",
+    "https://github.com/JuliaGraphics/FreeTypeBuilder/releases/download/v2.9.1/build_FreeType2.v2.9.0.jl",
     "https://github.com/SimonDanisch/FribidiBuilder/releases/download/0.14.0/build_fribidi.v0.14.0.jl",
     "https://github.com/SimonDanisch/NASMBuilder/releases/download/2.13.3/build_nasm.v2.13.3.jl"
 ]
