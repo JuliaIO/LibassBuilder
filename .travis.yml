@@ -17,17 +17,17 @@ env:
   - BINARYBUILDER_AUTOMATIC_APPLE=true
 sudo: required
 before_script:
-- julia -e 'Pkg.clone("https://github.com/JuliaPackaging/BinaryProvider.jl")'
-- julia -e 'Pkg.clone("https://github.com/JuliaPackaging/BinaryBuilder.jl"); Pkg.build()'
+  - julia -e 'Pkg.clone("https://github.com/JuliaPackaging/BinaryProvider.jl")'
+  - julia -e 'Pkg.clone("https://github.com/JuliaPackaging/BinaryBuilder.jl"); Pkg.build()'
 script:
-- julia build_tarballs.jl
+  - julia build_tarballs.jl
 deploy:
   provider: releases
   api_key:
     secure: RvR52FvC18AfTkvuKapNe+9bD271bt9iZ2xuvTcKmfsUerBlwdV94ke75s31IwJten3NJJbI97dbc3Zb8JAEx48Dz3z7ZpaqRpYmrRp4LXYwLg22iX8C509qwoYfn3ogBLqfrXyumKmecPlA3aXwg7OAqYuK6ZBzVp517HNtZW59yoKlxSMHJkI/pjn5JDEJ8c4XNhcFjMNeh1cQWwYa55aaiCI1F4UMM7c9jCrgYSwO5cFIGvRbmIF8HW71LcxjoBIRR+4MZE1zlZRZ0WclcdnyaQpLtCbevX0egromyeu6K6ov82He+YyECQfkx7M0DBxLgMrxQIPKMltqpcRI9NSs3zAvGgPfo7AUx3/ib/kd1GWweLAxX6QqhaxiOaojORPYAg7HJ2akcv6H5ntpPKggDNeO2ioaIP9sgZNmoNs9pcezEuOnVUhn3un6R9WrxfB13p+LYo4+k4UOloQ2CidbcAji5KoPtmQ1ukUsISMxGyAtmlxCICLRcfAa7pMz4B+nCZXjJx3r+xCAWwDjiCyeU4uutCit6/niI1y0d2cuEv/QSATKMe1BW/6e5VUGnNquIwTu8G0+doUCpBZNS0NEfxuzuuDBqFUi+ykKAdn9WDq+Spv9QdUYTcfx1LHv7FJ6J6lTRJVmmV6ABZ7M6PbPZqApioFus94y66rA21Y=
-    file_glob: true
-    file: products/*
-    skip_cleanup: true
-    on:
-        repo: SimonDanisch/NASMBuilder
-        tags: true
+  file_glob: true
+  file: products/*
+  skip_cleanup: true
+  on:
+    repo: JuliaIO/LibassBuilder
+    tags: true
