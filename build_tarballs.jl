@@ -12,7 +12,6 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
-apk add nasm
 cd libass-0.14.0/
 sed -i 's/9.10.3/2.9.1/' configure.ac
 autoreconf
